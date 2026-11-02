@@ -1,0 +1,5 @@
+# Select externally, for example SPRING_PROFILES_ACTIVE=local.
+# Add only local differences, such as an externally supplied database URL.
+logging:
+  level:
+    com.example: DEBUG

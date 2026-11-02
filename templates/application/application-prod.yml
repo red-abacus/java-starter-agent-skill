@@ -1,0 +1,5 @@
+# Select externally; secrets come from environment or mounted secret files.
+# Keep application defaults in application.yml and add only actual differences.
+logging:
+  level:
+    root: INFO

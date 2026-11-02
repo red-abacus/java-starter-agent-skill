@@ -1,0 +1,30 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+[*.java]
+max_line_length = 120
+ij_continuation_indent_size = 8
+ij_java_class_brace_style = end_of_line
+ij_java_method_brace_style = end_of_line
+ij_java_other_brace_style = end_of_line
+ij_java_if_brace_force = always
+ij_java_for_brace_force = always
+ij_java_while_brace_force = always
+ij_java_do_while_brace_force = always
+ij_java_keep_control_statement_in_one_line = false
+ij_java_class_count_to_use_import_on_demand = 9999
+ij_java_names_count_to_use_import_on_demand = 9999
+ij_java_packages_to_use_import_on_demand =
+ij_java_imports_layout = java.**,javax.**,|,jakarta.**,|,*,|,com.example.**,|,$*
+ij_java_layout_static_imports_separately = true
+
+[*.{yml,yaml}]
+indent_size = 2
+

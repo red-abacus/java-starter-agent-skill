@@ -1,0 +1,39 @@
+# Merge into src/main/resources/application.yml; this is an illustrative fragment.
+spring:
+  application:
+    name: example-api
+  # Default for new JPA REST APIs; complete DTO mapping inside service transactions.
+  jpa:
+    open-in-view: false
+  messages:
+    basename: messages
+    fallback-to-system-locale: false
+  # For database-backed applications adopting the accompanying Liquibase recipe.
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.xml
+
+# Select spring.lifecycle.timeout-per-shutdown-phase for the target application.
+# Align all phases and any preStop hook with the Pod termination budget.
+server:
+  shutdown: graceful
+
+# For new deployed applications using spring-boot-starter-actuator.
+# Configure endpoint access explicitly in the application's SecurityFilterChain.
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+      show-components: never
+      probes:
+        enabled: true
+
+# Example typed settings; bind with @ConfigurationProperties("app.notifications")
+# and validate with @Validated. This fragment does not create the Java class.
+app:
+  notifications:
+    timeout: 5s

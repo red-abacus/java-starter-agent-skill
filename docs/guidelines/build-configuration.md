@@ -17,6 +17,8 @@ For new projects, choose Maven, a currently supported Java LTS compatible with t
 
 Use Boot's starter parent by default and its managed dependency versions; use its BOM when another parent is required. Deliberately review overrides rather than independently upgrading every Spring/Hibernate dependency. Preview Java features and pre-release dependencies require a deliberate project decision.
 
+For AI capabilities, follow the [Spring AI framework preference](spring-ai.md#framework-preference) and [dependency-alignment policy](spring-ai-implementation.md#dependency-and-version-alignment).
+
 The verification fixture records a dated compatible stack. It is not a business application or a reason to upgrade an existing repository. A new project should document its actual build/test/run commands, configuration, integrations, and selected versions.
 
 Dependency-update automation remains [opt-in](#dependency-update-automation).

@@ -81,10 +81,13 @@ Separate verification, image publishing, and deployment into focused workflows u
 | Workflow | Responsibility |
 | --- | --- |
 | `ci.yml` | Pull-request Maven verification, OpenAPI validation/compatibility checks, and Helm lint/render checks. |
+| `ai-evals.yml` (AI applications) | Model-backed evaluations on pushes to `main`, with results tied to the evaluated revision and configuration. |
 | `publish.yml` | Verify the selected trusted revision, build and publish its image to Artifact Registry, and record the digest. |
 | `deploy.yml` | Deploy an existing image digest and selected chart version through Helm, then verify rollout and focused smoke checks. |
 
 Apply the [portable security-scanning policy](build-configuration.md#portable-security-scanning) at the agreed workflow points. Keep scanner configuration and commands in the repository so the checks can also run locally or on another CI provider; define blocking rules during project implementation.
+
+For AI applications, enforce the [evaluation deployment gate](spring-ai-evaluations.md#evaluation-execution-and-deployment-gates): require passing model-backed evaluations for the revision being deployed. Keep live-model evaluations out of PR and scheduled CI runs; their CI trigger is a push to `main`. Ensure separate deployment workflows cannot bypass this gate.
 
 The current image-publication trigger is a merge into `main`. Verify the resulting main-branch revision before building and publishing, and associate the image tag and digest with that exact revision. Configure event wiring consistently with the project's main-branch policy.
 

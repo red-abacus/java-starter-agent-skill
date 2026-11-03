@@ -18,6 +18,7 @@ SKILL_NAMES = ("java-spring-bootstrap", "java-spring-change", "java-spring-revie
 GUIDE_NAMES = (
     "architecture-java-style", "rest-api", "dto-validation-mapping", "entities-persistence",
     "security-errors", "integrations-background", "testing", "build-configuration", "operations", "delivery-gke",
+    "spring-ai", "spring-ai-implementation", "spring-ai-runtime", "spring-ai-evaluations",
 )
 REQUIRED_FILES = (
     "AGENTS.md",
@@ -41,7 +42,10 @@ REQUIRED_FILES = (
     f"docs/guidelines/{name}.md" for name in GUIDE_NAMES
 )
 
-OPTIONAL_FILES = ("README.md", "docs/verification.md", "verification/pom.xml")
+OPTIONAL_FILES = (
+    "README.md", "docs/verification.md", "verification/pom.xml",
+    "verification/skill-scenarios/README.md",
+)
 
 
 def without_fences(content):

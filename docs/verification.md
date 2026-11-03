@@ -1,6 +1,6 @@
 # Kit Verification
 
-Initial evidence was recorded on 2026-10-30. A separate 2026-11-02 record below covers the progressive-disclosure refactor. These checks validate the kit and its small contract fixture; application integration still belongs in each adopting project.
+Initial evidence was recorded on 2026-10-30. Separate records below cover the 2026-11-02 progressive-disclosure refactor and 2026-11-03 Spring AI routing checks. These checks validate the kit and its small contract fixture; application integration still belongs in each adopting project.
 
 ## Repeatable checks
 
@@ -73,5 +73,25 @@ A separate Helm-only review correctly identified that availability settings requ
 A fresh review of the same Helm proposal after that refinement read the four entry documents plus selected chart, rollout, health, shutdown, sizing, replica, and availability sections: 2,939 words / 23,396 bytes, with heading navigation counted separately. It did not read application-testing, mapping, or persistence guides, and retained the owner-discussion requirement and deployment-specific verification obligations.
 
 Independent final review found no critical/important issues and identified a stale PATCH prose pointer left by the split. It was replaced with a direct DTO-validation link; a similar deployment pointer was corrected during the same navigation check. Both destinations pass heading validation. The reviewer independently confirmed policy/source preservation, required discussions, unchanged executable artifacts, unit checks, and runtime-copy portability.
+
+## Spring AI disclosure and routing (2026-11-03)
+
+The 2,524-word AI guide became a 365-word [router](guidelines/spring-ai.md), with focused [implementation](guidelines/spring-ai-implementation.md), [runtime/security](guidelines/spring-ai-runtime.md), and [evaluation](guidelines/spring-ai-evaluations.md) references of 1,421, 698, and 394 words. The handbook routes common AI tasks directly to those references. Root instructions and the three skill files were unchanged.
+
+All 17 policy sections and 18 primary-source URLs were preserved. Policy comparison normalizes whitespace and Markdown link destinations; accepted policy prose was unchanged. Cross-topic links now target the owning guide, and the validator requires all four AI files.
+
+Three [versioned scenarios and scoring criteria](../verification/skill-scenarios/README.md) were run before and after the split, each in an independent fresh context. Agents received skill discovery metadata and their task without the rubric or interview history. A temporary reader captured exact exposed guidance; [dated results](../verification/skill-scenarios/2026-11-03-results.json) retain read content, hashes, measurements, answer excerpts, and human scoring. The [complete answers](../verification/skill-scenarios/2026-11-03-answers.md) support independent re-scoring.
+
+| Scenario | Before body reads | After body reads | Observed result |
+| --- | --- | --- | --- |
+| Prompt-only change | 2,960 words / 23,584 bytes | 2,836 words / 22,887 bytes | Kept resource-based prompts, existing contracts/model, and appropriate verification; read selected prompt/evaluation/permitted-data sections. |
+| Evaluation/deployment gate | 3,715 words / 29,608 bytes | 3,494 words / 27,876 bytes | Kept local on-demand and main-push-only live evaluations; required matching revision/configuration evidence and blocked every nonpassing state across deployment workflows. |
+| Unrelated Java fix | 2,817 words / 22,266 bytes | 2,860 words / 22,732 bytes | Selected the change workflow and focused Java tests; opened no AI guide in either layout. The larger handbook added 43 words. |
+
+All three post-split runs met the scenario criteria. The prompt case also read permitted-data guidance for evaluation inputs; it did not load unrelated runtime topics. Heading-only navigation is counted separately in the result artifact. The general Testing section exposed its subsections in these runs. Counts exclude host/system context, automatically supplied root instructions, discovery metadata, tool formatting, and final answers. One sample per case/layout is a routing observation; optional reads differed, so these numbers are not a controlled token benchmark or a guarantee about future agents.
+
+Kit validation and all 18 Python validator tests passed. Actual full and runtime-only copies validated from outside their relocated directories. Removing each AI guide in a temporary copy was rejected as a missing required artifact. No application model evaluation, deployment, or Java fixture behavior was exercised by this documentation/routing change.
+
+Fresh independent review confirmed policy/source preservation, working links, routing scores against complete answers, captured-content hashes/counts, and passing validation/tests/relocation checks. Two evidence details were corrected: full answer transcripts were retained for re-scoring, and the prompt baseline's extra evaluation-gate read was made explicit. No findings remained. Source URL preservation does not establish current framework API correctness; bootstrap/review skill files had no independent before snapshots, while root instructions and the change skill were compared against captured content.
 
 These behavioral checks did not generate an application, invoke a cloud service, or test a deployed workload. File organization and instructions guide selective reading; they cannot enforce a hard context budget.

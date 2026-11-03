@@ -20,6 +20,7 @@ Use only the sections relevant to the task. [Handbook index](../java-spring-guid
 | Controllers | MVC slices with MockMvc and mocked services; verify binding, DTO validation, HTTP status/headers, error shape, and relevant locale behavior. |
 | Mappers | Real configured ModelMapper, including custom conversions and PATCH presence/null cases. |
 | External HTTP clients | Local WireMock servers with the real client/transport; mock provider clients in service unit tests. |
+| AI workflows | Layered application tests and live-model evaluations under the [Spring AI evaluation convention](spring-ai-evaluations.md#testing-and-evaluations), with versioned workflow datasets and workflow-specific acceptance criteria. |
 | Persistence | Repository tests with Testcontainers using the production database engine and real migrations. |
 | Method security | Actual Spring-managed service proxy with method security enabled; allowed/denied capabilities and resource restrictions. |
 | Complete flow | Selected SpringBootTest scenarios for wiring, transactions, and important cross-layer behavior. |

@@ -1,0 +1,735 @@
+{
+  "date": "2026-11-03",
+  "method": "One fresh-context read-only agent per scenario and layout; six runs total. Discovery metadata and scenario task supplied without the rubric or interview history. Temporary reader logged exact output content. Human-scored answers and reads against the scenario criteria.",
+  "limitations": [
+    "Not a controlled token benchmark or statistical reliability test.",
+    "Counts cover logged guidance content only; they exclude host/system instructions, automatically supplied AGENTS.md, discovery metadata, tool formatting, and final answers.",
+    "Before and after agents made different optional, relevant reads. Counts do not isolate the effect of file splitting.",
+    "Shared Testing sections include their subsections; these runs did not optimize the general Java testing guide.",
+    "No application implementation, provider evaluation, or deployment was exercised."
+  ],
+  "source_fixture_sha256": "fb8a3edd477cb619fd990c0d345f5e1ab35d518ab35e852035c9bf3e11db00e7",
+  "preservation": {
+    "policy_sections_preserved": 17,
+    "primary_urls_preserved": 18,
+    "normalization": "Whitespace and Markdown link destinations only",
+    "files": {
+      "spring-ai-evaluations.md": 394,
+      "spring-ai-implementation.md": 1421,
+      "spring-ai-runtime.md": 698,
+      "spring-ai.md": 365
+    }
+  },
+  "relocation": {
+    "relocation": {
+      "runtime": "Kit validation passed (references, skill metadata, XML and YAML syntax).",
+      "full": "Kit validation passed (references, skill metadata, XML and YAML syntax)."
+    },
+    "missing_ai_guides_rejected": [
+      "spring-ai",
+      "spring-ai-implementation",
+      "spring-ai-runtime",
+      "spring-ai-evaluations"
+    ]
+  },
+  "runs": [
+    {
+      "scenario_id": "prompt-only-change",
+      "phase": "before",
+      "agent": "/root/ai_prompt_before",
+      "selected_skill": "java-spring-change",
+      "body_words": 2960,
+      "body_bytes": 23584,
+      "heading_navigation_words": 91,
+      "heading_navigation_bytes": 621,
+      "observed_answer_excerpt": "Edit only src/main/resources/prompts/ticket-summary/system.st to require supplied ticket IDs to appear verbatim with their corresponding summaries, without inventing or rewriting IDs.",
+      "assessment_note": "Selected prompt resource and evaluation sections, including the evaluation execution/deployment gate as verification context, plus permitted-data rules for harmless injection fixtures. No execution-limit, logging, tool-access, memory, RAG, protocol, or delivery-guide bodies read.",
+      "criterion_results": [
+        {
+          "criterion": 1,
+          "result": "pass"
+        },
+        {
+          "criterion": 2,
+          "result": "pass"
+        },
+        {
+          "criterion": 3,
+          "result": "pass"
+        },
+        {
+          "criterion": 4,
+          "result": "pass"
+        },
+        {
+          "criterion": 5,
+          "result": "pass"
+        }
+      ],
+      "reads": [
+        {
+          "path": ".agents/skills/java-spring-change/SKILL.md",
+          "selector": "full",
+          "words": 247,
+          "bytes": 2214,
+          "sha256": "0b606b66e2bcd44c42a6b0e75d29f87c5b5910802966f8015727c969fe2f149a"
+        },
+        {
+          "path": "docs/java-spring-guidelines.md",
+          "selector": "full",
+          "words": 405,
+          "bytes": 3736,
+          "sha256": "f7e78ecf204914e68999bdb8c8e37ebf5a1d1e8c6a60b8db15741ee869d1d112"
+        },
+        {
+          "path": "docs/agent-workflow.md",
+          "selector": "full",
+          "words": 782,
+          "bytes": 5877,
+          "sha256": "0b8ec506d1e483bbc640ecd368615aaa9a8165a38481e9270bdef7515bbbc745"
+        },
+        {
+          "path": "docs/guidelines/testing.md",
+          "selector": "Testing",
+          "words": 912,
+          "bytes": 6943,
+          "sha256": "7d7e029b6d6f5c951558a2df8544c1a9e29329d037635e79b1b10cbbdffd2fdd"
+        },
+        {
+          "path": "docs/guidelines/spring-ai.md",
+          "selector": "headings",
+          "words": 91,
+          "bytes": 621,
+          "sha256": "46d1c53eaaecd33c80324239368f50c9fad2091b2ee37a8bfc3c54bc150c6b5d"
+        },
+        {
+          "path": "docs/guidelines/spring-ai.md",
+          "selector": "Testing and evaluations",
+          "words": 168,
+          "bytes": 1365,
+          "sha256": "bd688efce5a55c806e59bb627e25c55baa5eb02097cce440140a7304d3b6886f"
+        },
+        {
+          "path": "docs/guidelines/spring-ai.md",
+          "selector": "Evaluation execution and deployment gates",
+          "words": 167,
+          "bytes": 1195,
+          "sha256": "7b24f48a6bde652bae42eda031a8effaaed5da0112a7954981185b74ee612916"
+        },
+        {
+          "path": "docs/guidelines/spring-ai.md",
+          "selector": "Prompt storage and management",
+          "words": 110,
+          "bytes": 863,
+          "sha256": "dc934935af670fd92e4f9f3f021c1f9f535165ea9ee3ac1261361c0c8ad87b95"
+        },
+        {
+          "path": "docs/guidelines/spring-ai.md",
+          "selector": "Untrusted content and permitted data",
+          "words": 169,
+          "bytes": 1391,
+          "sha256": "079eebbc14d34b694be016ce02d05f487b8f1cfec2cb2bfdb7e4ede94ad9eb75"
+        }
+      ],
+      "answer_section": "prompt-before"
+    },
+    {
+      "scenario_id": "prompt-only-change",
+      "phase": "after",
+      "agent": "/root/ai_prompt_after",
+      "selected_skill": "java-spring-change",
+      "body_words": 2836,
+      "body_bytes": 22887,
+      "heading_navigation_words": 76,
+      "heading_navigation_bytes": 515,
+      "observed_answer_excerpt": "Update only src/main/resources/prompts/ticket-summary/system.st to require preserving supplied ticket IDs exactly and associating them with the correct summarized tickets.",
+      "assessment_note": "Selected prompt resource and application/evaluation testing. Followed permitted-data cross-link for evaluation data. No execution-limit, logging, tool-access, memory, RAG, protocol, or deployment bodies read.",
+      "criterion_results": [
+        {
+          "criterion": 1,
+          "result": "pass"
+        },
+        {
+          "criterion": 2,
+          "result": "pass"
+        },
+        {
+          "criterion": 3,
+          "result": "pass"
+        },
+        {
+          "criterion": 4,
+          "result": "pass"
+        },
+        {
+          "criterion": 5,
+          "result": "pass"
+        }
+      ],
+      "reads": [
+        {
+          "path": ".agents/skills/java-spring-change/SKILL.md",
+          "selector": "full",
+          "words": 247,
+          "bytes": 2214,
+          "sha256": "0b606b66e2bcd44c42a6b0e75d29f87c5b5910802966f8015727c969fe2f149a"
+        },
+        {
+          "path": "docs/java-spring-guidelines.md",
+          "selector": "full",
+          "words": 448,
+          "bytes": 4175,
+          "sha256": "e6efa68f20f7cc2eb1c5a9ede9471e1f86afae4a113abdb06e274d3f520f9907"
+        },
+        {
+          "path": "docs/guidelines/testing.md",
+          "selector": "Testing",
+          "words": 912,
+          "bytes": 6955,
+          "sha256": "38a8fc48169d5d28b3a1ce699f90eb746971941fd3a5b854926d4be6066ae27c"
+        },
+        {
+          "path": "docs/agent-workflow.md",
+          "selector": "full",
+          "words": 782,
+          "bytes": 5877,
+          "sha256": "0b8ec506d1e483bbc640ecd368615aaa9a8165a38481e9270bdef7515bbbc745"
+        },
+        {
+          "path": "docs/guidelines/spring-ai-evaluations.md",
+          "selector": "headings",
+          "words": 21,
+          "bytes": 142,
+          "sha256": "a218f2480a384303e9d827c489dd083be223f0e259a140a9ac1cc0e0b99e9209"
+        },
+        {
+          "path": "docs/guidelines/spring-ai-implementation.md",
+          "selector": "headings",
+          "words": 55,
+          "bytes": 373,
+          "sha256": "24d67317e961d74214890b4a7a859284a9094b11643da3cd281c6aa495e779df"
+        },
+        {
+          "path": "docs/guidelines/spring-ai-evaluations.md",
+          "selector": "Testing and evaluations",
+          "words": 168,
+          "bytes": 1385,
+          "sha256": "c0917083fa395cc3e4294230e666ffd1513a5b5dcbcceeff964afe323a9147e8"
+        },
+        {
+          "path": "docs/guidelines/spring-ai-implementation.md",
+          "selector": "Prompt storage and management",
+          "words": 110,
+          "bytes": 863,
+          "sha256": "dc934935af670fd92e4f9f3f021c1f9f535165ea9ee3ac1261361c0c8ad87b95"
+        },
+        {
+          "path": "docs/guidelines/spring-ai-runtime.md",
+          "selector": "Untrusted content and permitted data",
+          "words": 169,
+          "bytes": 1418,
+          "sha256": "7129c4cff18c6874c6949f07122844075244ddd6cd4e3309a61534bd7e3aba39"
+        }
+      ],
+      "answer_section": "prompt-after"
+    },
+    {
+      "scenario_id": "evaluation-deployment-gate",
+      "phase": "before",
+      "agent": "/root/ai_eval_before",
+      "selected_skill": "java-spring-change",
+      "body_words": 3715,
+      "body_bytes": 29608,
+      "heading_navigation_words": 179,
+      "heading_navigation_bytes": 1243,
+      "observed_answer_excerpt": "Treat quality failure, provider/infrastructure error, timeout, cancellation, skipping, missing evidence, and unavailable evaluation as deployment-blocking outcomes.",
+      "assessment_note": "Preserved main-push-only CI, local on-demand use, exact revision/configuration evidence, nonpassing-state blocking, separate-workflow enforcement, and ordinary PR tests. Also read scoped delivery recipes and permitted-data rules.",
+      "criterion_results": [
+        {
+          "criterion": 1,
+          "result": "pass"
+        },
+        {
+          "criterion": 2,
+          "result": "pass"
+        },
+        {
+          "criterion": 3,
+          "result": "pass"
+        },
+        {
+          "criterion": 4,
+          "result": "pass"
+        },
+        {
+          "criterion": 5,
+          "result": "pass"
+        },
+        {
+          "criterion": 6,
+          "result": "pass"
+        }
+      ],
+      "reads": [
+        {
+          "path": ".agents/skills/java-spring-change/SKILL.md",
+          "selector": "full",
+          "words": 247,
+          "bytes": 2214,
+          "sha256": "0b606b66e2bcd44c42a6b0e75d29f87c5b5910802966f8015727c969fe2f149a"
+        },
+        {
+          "path": "docs/java-spring-guidelines.md",
+          "selector": "full",
+          "words": 405,
+          "bytes": 3736,
+          "sha256": "f7e78ecf204914e68999bdb8c8e37ebf5a1d1e8c6a60b8db15741ee869d1d112"
+        },
+        {
+          "path": "docs/agent-workflow.md",
+          "selector": "full",
+          "words": 782,
+          "bytes": 5877,
+          "sha256": "0b8ec506d1e483bbc640ecd368615aaa9a8165a38481e9270bdef7515bbbc745"
+        },
+        {
+          "path": "docs/guidelines/testing.md",
+          "selector": "headings",
+          "words": 29,
+          "bytes": 204,
+          "sha256": "50c95ab0f0ebe7ec8566ede8b80aa73ff964527e6227945ba3d37e7d6c643848"
+        },
+        {
+          "path": "docs/guidelines/spring-ai.md",
+          "selector": "headings",
+          "words": 91,
+          "bytes": 621,
+          "sha256": "46d1c53eaaecd33c80324239368f50c9fad2091b2ee37a8bfc3c54bc150c6b5d"
+        },
+        {
+          "path": "docs/guidelines/delivery-gke.md",
+          "selector": "headings",
+          "words": 47,
+          "bytes": 346,
+          "sha256": "f9d3909c4cf4a6b827a32f0b3dcbee730106b1571a6eb10b4722491b6d20cf3b"
+        },
+        {
+          "path": "docs/guidelines/testing.md",
+          "selector": "Testing",
+          "words": 912,
+          "bytes": 6943,
+          "sha256": "7d7e029b6d6f5c951558a2df8544c1a9e29329d037635e79b1b10cbbdffd2fdd"
+        },
+        {
+          "path": "docs/guidelines/spring-ai.md",
+          "selector": "Evaluation execution and deployment gates",
+          "words": 167,
+          "bytes": 1195,
+          "sha256": "7b24f48a6bde652bae42eda031a8effaaed5da0112a7954981185b74ee612916"
+        },
+        {
+          "path": "docs/guidelines/delivery-gke.md",
+          "selector": "GitHub Actions workflows and cloud authentication",
+          "words": 344,
+          "bytes": 2681,
+          "sha256": "6f575414472917ab77304187dd71ff326de55b311b783b61bdfb28c5e1fb1e09"
+        },
+        {
+          "path": "docs/guidelines/spring-ai.md",
+          "selector": "Testing and evaluations",
+          "words": 168,
+          "bytes": 1365,
+          "sha256": "bd688efce5a55c806e59bb627e25c55baa5eb02097cce440140a7304d3b6886f"
+        },
+        {
+          "path": "docs/guidelines/delivery-gke.md",
+          "selector": "Environments and promotion",
+          "words": 86,
+          "bytes": 624,
+          "sha256": "2e763403445dc2f3454645b25d8c4e355b10becf4c5df4524d47a012dc86a82e"
+        },
+        {
+          "path": "docs/guidelines/delivery-gke.md",
+          "selector": "Deployment strategy and release verification",
+          "words": 171,
+          "bytes": 1340,
+          "sha256": "69fabba2c22d21b14aa321496bc6f07d5fb2b563a8dc53ef61dfbbb6f4d92e84"
+        },
+        {
+          "path": "docs/guidelines/spring-ai.md",
+          "selector": "Untrusted content and permitted data",
+          "words": 169,
+          "bytes": 1391,
+          "sha256": "079eebbc14d34b694be016ce02d05f487b8f1cfec2cb2bfdb7e4ede94ad9eb75"
+        },
+        {
+          "path": "templates/README.md",
+          "selector": "full",
+          "words": 166,
+          "bytes": 1372,
+          "sha256": "6166e3b491cc03a77bf737427574d9269c8d1954ea3569e006e7178157eb39f5"
+        },
+        {
+          "path": "templates/delivery.md",
+          "selector": "headings",
+          "words": 12,
+          "bytes": 72,
+          "sha256": "4c12bc3db262b4a4971d82da541481941dbc9f6cab8b03bdb20af3c4ca606a51"
+        },
+        {
+          "path": "templates/delivery.md",
+          "selector": "GitHub Actions",
+          "words": 98,
+          "bytes": 870,
+          "sha256": "5ec3edde7c26282c832d52bf1a092cbaabbf23e7b0bf8ce4b5bd25983232b801"
+        }
+      ],
+      "answer_section": "eval-before"
+    },
+    {
+      "scenario_id": "evaluation-deployment-gate",
+      "phase": "after",
+      "agent": "/root/ai_eval_after",
+      "selected_skill": "java-spring-change",
+      "body_words": 3494,
+      "body_bytes": 27876,
+      "heading_navigation_words": 97,
+      "heading_navigation_bytes": 692,
+      "observed_answer_excerpt": "A successful evaluation for another revision cannot satisfy the gate.",
+      "assessment_note": "Preserved the same gate and ordinary PR tests. Read evaluation and delivery sections plus permitted-data rules, without implementation guide or provider/prompt/memory/RAG/tool implementation.",
+      "criterion_results": [
+        {
+          "criterion": 1,
+          "result": "pass"
+        },
+        {
+          "criterion": 2,
+          "result": "pass"
+        },
+        {
+          "criterion": 3,
+          "result": "pass"
+        },
+        {
+          "criterion": 4,
+          "result": "pass"
+        },
+        {
+          "criterion": 5,
+          "result": "pass"
+        },
+        {
+          "criterion": 6,
+          "result": "pass"
+        }
+      ],
+      "reads": [
+        {
+          "path": ".agents/skills/java-spring-change/SKILL.md",
+          "selector": "full",
+          "words": 247,
+          "bytes": 2214,
+          "sha256": "0b606b66e2bcd44c42a6b0e75d29f87c5b5910802966f8015727c969fe2f149a"
+        },
+        {
+          "path": "docs/java-spring-guidelines.md",
+          "selector": "full",
+          "words": 448,
+          "bytes": 4175,
+          "sha256": "e6efa68f20f7cc2eb1c5a9ede9471e1f86afae4a113abdb06e274d3f520f9907"
+        },
+        {
+          "path": "docs/agent-workflow.md",
+          "selector": "full",
+          "words": 782,
+          "bytes": 5877,
+          "sha256": "0b8ec506d1e483bbc640ecd368615aaa9a8165a38481e9270bdef7515bbbc745"
+        },
+        {
+          "path": "docs/guidelines/testing.md",
+          "selector": "headings",
+          "words": 29,
+          "bytes": 204,
+          "sha256": "50c95ab0f0ebe7ec8566ede8b80aa73ff964527e6227945ba3d37e7d6c643848"
+        },
+        {
+          "path": "docs/guidelines/spring-ai-evaluations.md",
+          "selector": "headings",
+          "words": 21,
+          "bytes": 142,
+          "sha256": "a218f2480a384303e9d827c489dd083be223f0e259a140a9ac1cc0e0b99e9209"
+        },
+        {
+          "path": "docs/guidelines/delivery-gke.md",
+          "selector": "headings",
+          "words": 47,
+          "bytes": 346,
+          "sha256": "f9d3909c4cf4a6b827a32f0b3dcbee730106b1571a6eb10b4722491b6d20cf3b"
+        },
+        {
+          "path": "docs/guidelines/spring-ai-evaluations.md",
+          "selector": "Evaluation execution and deployment gates",
+          "words": 167,
+          "bytes": 1195,
+          "sha256": "7b24f48a6bde652bae42eda031a8effaaed5da0112a7954981185b74ee612916"
+        },
+        {
+          "path": "docs/guidelines/spring-ai-evaluations.md",
+          "selector": "Testing and evaluations",
+          "words": 168,
+          "bytes": 1385,
+          "sha256": "c0917083fa395cc3e4294230e666ffd1513a5b5dcbcceeff964afe323a9147e8"
+        },
+        {
+          "path": "docs/guidelines/delivery-gke.md",
+          "selector": "GitHub Actions workflows and cloud authentication",
+          "words": 344,
+          "bytes": 2693,
+          "sha256": "6ec0fdcd2a41a11848cefeeb14b9456e09bb6e55879276535b5fad5a9902c288"
+        },
+        {
+          "path": "docs/guidelines/delivery-gke.md",
+          "selector": "Deployment strategy and release verification",
+          "words": 171,
+          "bytes": 1340,
+          "sha256": "69fabba2c22d21b14aa321496bc6f07d5fb2b563a8dc53ef61dfbbb6f4d92e84"
+        },
+        {
+          "path": "docs/guidelines/delivery-gke.md",
+          "selector": "Environments and promotion",
+          "words": 86,
+          "bytes": 624,
+          "sha256": "2e763403445dc2f3454645b25d8c4e355b10becf4c5df4524d47a012dc86a82e"
+        },
+        {
+          "path": "docs/guidelines/testing.md",
+          "selector": "Testing",
+          "words": 912,
+          "bytes": 6955,
+          "sha256": "38a8fc48169d5d28b3a1ce699f90eb746971941fd3a5b854926d4be6066ae27c"
+        },
+        {
+          "path": "docs/guidelines/spring-ai-runtime.md",
+          "selector": "Untrusted content and permitted data",
+          "words": 169,
+          "bytes": 1418,
+          "sha256": "7129c4cff18c6874c6949f07122844075244ddd6cd4e3309a61534bd7e3aba39"
+        }
+      ],
+      "answer_section": "eval-after"
+    },
+    {
+      "scenario_id": "unrelated-java-change",
+      "phase": "before",
+      "agent": "/root/ai_java_before",
+      "selected_skill": "java-spring-change",
+      "body_words": 2817,
+      "body_bytes": 22266,
+      "heading_navigation_words": 73,
+      "heading_navigation_bytes": 514,
+      "observed_answer_excerpt": "Correct decimal zero-padding so formatInvoiceNumber(42, 6) returns \"000042\".",
+      "assessment_note": "Planned focused Java unit tests and contract preservation. No Spring AI file opened.",
+      "criterion_results": [
+        {
+          "criterion": 1,
+          "result": "pass"
+        },
+        {
+          "criterion": 2,
+          "result": "pass"
+        },
+        {
+          "criterion": 3,
+          "result": "pass"
+        },
+        {
+          "criterion": 4,
+          "result": "pass"
+        },
+        {
+          "criterion": 5,
+          "result": "pass"
+        }
+      ],
+      "reads": [
+        {
+          "path": ".agents/skills/java-spring-change/SKILL.md",
+          "selector": "full",
+          "words": 247,
+          "bytes": 2214,
+          "sha256": "0b606b66e2bcd44c42a6b0e75d29f87c5b5910802966f8015727c969fe2f149a"
+        },
+        {
+          "path": "docs/java-spring-guidelines.md",
+          "selector": "full",
+          "words": 405,
+          "bytes": 3736,
+          "sha256": "f7e78ecf204914e68999bdb8c8e37ebf5a1d1e8c6a60b8db15741ee869d1d112"
+        },
+        {
+          "path": "docs/agent-workflow.md",
+          "selector": "full",
+          "words": 782,
+          "bytes": 5877,
+          "sha256": "0b8ec506d1e483bbc640ecd368615aaa9a8165a38481e9270bdef7515bbbc745"
+        },
+        {
+          "path": "docs/guidelines/testing.md",
+          "selector": "headings",
+          "words": 29,
+          "bytes": 204,
+          "sha256": "50c95ab0f0ebe7ec8566ede8b80aa73ff964527e6227945ba3d37e7d6c643848"
+        },
+        {
+          "path": "docs/guidelines/architecture-java-style.md",
+          "selector": "headings",
+          "words": 44,
+          "bytes": 310,
+          "sha256": "461d7cc793c186d70958893a078fbe4c257ea54f60643ecab388c90724f71a2b"
+        },
+        {
+          "path": "docs/guidelines/architecture-java-style.md",
+          "selector": "Responsibilities",
+          "words": 209,
+          "bytes": 1536,
+          "sha256": "70b92a033fefd86498771740438a887f4956a187db0aa5a62cc6451874632da7"
+        },
+        {
+          "path": "docs/guidelines/architecture-java-style.md",
+          "selector": "Java style",
+          "words": 262,
+          "bytes": 1960,
+          "sha256": "b8d5f5ffaf1f25f7b7c229e8cc73ec7a41c8415026399e9761df59cddc570411"
+        },
+        {
+          "path": "docs/guidelines/testing.md",
+          "selector": "Testing",
+          "words": 912,
+          "bytes": 6943,
+          "sha256": "7d7e029b6d6f5c951558a2df8544c1a9e29329d037635e79b1b10cbbdffd2fdd"
+        }
+      ],
+      "answer_section": "java-before"
+    },
+    {
+      "scenario_id": "unrelated-java-change",
+      "phase": "after",
+      "agent": "/root/ai_java_after",
+      "selected_skill": "java-spring-change",
+      "body_words": 2860,
+      "body_bytes": 22732,
+      "heading_navigation_words": 44,
+      "heading_navigation_bytes": 310,
+      "observed_answer_excerpt": "Preserve the signature, existing validation/errors, and behavior for signs and widths outside the normal case.",
+      "assessment_note": "Planned focused Java unit tests and contract preservation. No Spring AI file opened.",
+      "criterion_results": [
+        {
+          "criterion": 1,
+          "result": "pass"
+        },
+        {
+          "criterion": 2,
+          "result": "pass"
+        },
+        {
+          "criterion": 3,
+          "result": "pass"
+        },
+        {
+          "criterion": 4,
+          "result": "pass"
+        },
+        {
+          "criterion": 5,
+          "result": "pass"
+        }
+      ],
+      "reads": [
+        {
+          "path": ".agents/skills/java-spring-change/SKILL.md",
+          "selector": "full",
+          "words": 247,
+          "bytes": 2214,
+          "sha256": "0b606b66e2bcd44c42a6b0e75d29f87c5b5910802966f8015727c969fe2f149a"
+        },
+        {
+          "path": "docs/java-spring-guidelines.md",
+          "selector": "full",
+          "words": 448,
+          "bytes": 4175,
+          "sha256": "e6efa68f20f7cc2eb1c5a9ede9471e1f86afae4a113abdb06e274d3f520f9907"
+        },
+        {
+          "path": "docs/agent-workflow.md",
+          "selector": "full",
+          "words": 782,
+          "bytes": 5877,
+          "sha256": "0b8ec506d1e483bbc640ecd368615aaa9a8165a38481e9270bdef7515bbbc745"
+        },
+        {
+          "path": "docs/guidelines/architecture-java-style.md",
+          "selector": "headings",
+          "words": 44,
+          "bytes": 310,
+          "sha256": "461d7cc793c186d70958893a078fbe4c257ea54f60643ecab388c90724f71a2b"
+        },
+        {
+          "path": "docs/guidelines/testing.md",
+          "selector": "Testing",
+          "words": 912,
+          "bytes": 6955,
+          "sha256": "38a8fc48169d5d28b3a1ce699f90eb746971941fd3a5b854926d4be6066ae27c"
+        },
+        {
+          "path": "docs/guidelines/architecture-java-style.md",
+          "selector": "Java style",
+          "words": 262,
+          "bytes": 1960,
+          "sha256": "b8d5f5ffaf1f25f7b7c229e8cc73ec7a41c8415026399e9761df59cddc570411"
+        },
+        {
+          "path": "docs/guidelines/architecture-java-style.md",
+          "selector": "Responsibilities",
+          "words": 209,
+          "bytes": 1551,
+          "sha256": "61cb27b2e4b819c15d745d8c04944098c6faf1fdf5cdcd0bd1b5940c21dbae90"
+        }
+      ],
+      "answer_section": "java-after"
+    }
+  ],
+  "captured_content_by_sha256": {
+    "0b606b66e2bcd44c42a6b0e75d29f87c5b5910802966f8015727c969fe2f149a": "---\nname: java-spring-change\ndescription: Use when implementing a feature, fixing a bug, or changing Java or Spring Boot application code under the owner's working conventions.\n---\n\n# Change a Java/Spring Boot Application\n\n## Scope and select guidance\n\nInspect applicable instructions, nearby code, contracts, tests, build, and user changes. Read the [working agreement](../../../docs/agent-workflow.md) and use the [handbook index](../../../docs/java-spring-guidelines.md) to select affected topic sections. Keep existing requirements and unrelated work intact. Read additional references when the behavior crosses a boundary, rather than loading the whole library.\n\nFor a clear change, state the approach briefly and proceed. Align substantial architectural or uncertain product decisions before implementation; continue through authorized implementation and verification.\n\n## Implement at the owning layer\n\nUse the [architecture/service sections](../../../docs/guidelines/architecture-java-style.md#responsibilities) when changing responsibilities and the Java/Lombok sections when style choices arise. Select API, persistence, security/error, integration, configuration, or delivery sections according to what the change touches.\n\nFor PATCH, read [DTO validation/mapping](../../../docs/guidelines/dto-validation-mapping.md) and the [worked example](../../../docs/examples/partial-updates.md). Preserve inheritance and omitted/null/value semantics. Add relevant HTTP, transaction, authorization, and persistence guidance when affected; do not infer those behaviors from mapping alone.\n\nFor deletion, caching, external effects, or availability configuration, resolve the guide's workflow-specific requirements using explicit answers already supplied. Read [configuration recipes](../../../templates/README.md) only when adopting or changing that configuration.\n\n## Verify and deliver\n\nUse the [testing surface table](../../../docs/guidelines/testing.md#testing), then applicable subsections. Run meaningful checks and the project's required verification, reporting actual results and unavailable checks. Deliver verified local changes by default; Git actions follow the working agreement and the user's request.\n",
+    "f7e78ecf204914e68999bdb8c8e37ebf5a1d1e8c6a60b8db15741ee869d1d112": "# Java and Spring Boot Guidelines\n\nThese are the owner's accepted defaults. In existing projects, apply the [gradual-adoption policy](agent-workflow.md#existing-projects). Explicit project requirements and the current task determine what changes. Examples use `Customer` and `com.example`; these are illustrative names, not mandatory domain or package choices.\n\n## Select guidance by task\n\nThis file is a routing index. Read the applicable project instructions and [working agreement](agent-workflow.md), then select the references below. Read only relevant sections; follow additional links when the behavior crosses a boundary. The references are not a checklist to load in full.\n\n| Task touches | Read |\n| --- | --- |\n| Packages, class responsibilities, service contracts, Java style, collections, decimal values, or opt-in caching | [Architecture and Java style](guidelines/architecture-java-style.md) |\n| Comments, Javadoc, README content, or architectural decision records | [Documentation conventions](guidelines/architecture-java-style.md#documentation-and-comments) |\n| HTTP paths, updates, responses, pagination, binding, versioning, ETags, or OpenAPI | Relevant [REST contract sections](guidelines/rest-api.md#sections) |\n| DTO inheritance, request validation, or structural mapping | [DTO validation and mapping](guidelines/dto-validation-mapping.md); for PATCH, the [worked example](examples/partial-updates.md) |\n| Entities, repositories, transactions, deletion, constraints, or migrations | Relevant [persistence sections](guidelines/entities-persistence.md#sections) |\n| Authentication, CORS/CSRF, capability/resource checks, exceptions, errors, or localization | Applicable [security/error sections](guidelines/security-errors.md#sections) |\n| Provider HTTP calls, commit-dependent effects, scheduling, or asynchronous work | Relevant [integration/background sections](guidelines/integrations-background.md#sections) |\n| AI integrations, agents, evaluations, or AI-powered pipelines | Relevant [Spring AI sections](guidelines/spring-ai.md#sections) |\n| Tests or verification of changed behavior | [Testing surfaces](guidelines/testing.md#testing), then the applicable subsection |\n| Maven/JDK/Boot setup, dependency updates, security scanning, configuration binding, or logging | Relevant [build/configuration sections](guidelines/build-configuration.md#sections) |\n| Reliability goals, alerts, probes, shutdown, resources, scaling, placement, metrics, or tracing | Relevant [operations sections](guidelines/operations.md#sections) |\n| GKE identities/secrets, image packaging, Helm, environments, or CI/CD | Relevant [delivery sections](guidelines/delivery-gke.md#sections) |\n\n## Scope examples\n\n- A DTO PATCH fix starts with DTO/mapping guidance and its example; add HTTP, persistence, security, and test sections only as affected.\n- A migration starts with persistence/migrations and database testing; consult API contracts only if behavior changes.\n- A Helm-only change starts with [chart organization](guidelines/delivery-gke.md#helm-chart-organization) and [rollout verification](guidelines/delivery-gke.md#deployment-strategy-and-release-verification); add [availability controls](guidelines/operations.md#availability-during-maintenance-and-failures) when budgets or placement change.\n- A minimal bootstrap reads architecture and build/configuration first, adding references for the capabilities actually requested.\n\n## Adoption and primary references\n\nUse the [template index](../templates/README.md) only when adopting or changing configuration recipes. Each topic lists its primary sources. Consult the documentation matching the target project's versions, rather than relying on a newer API from a tutorial.\n",
+    "0b8ec506d1e483bbc640ecd368615aaa9a8165a38481e9270bdef7515bbbc745": "# Agent Working Agreement\n\nThis agreement governs collaboration and delivery. The [engineering handbook](java-spring-guidelines.md) owns implementation conventions. The current user request and the project's applicable instructions determine the task.\n\n## Understand the change\n\nRead relevant project instructions, code, tests, build configuration, and public contracts before deciding what to change. Reuse what the repository already answers. Ask focused questions when a missing business requirement materially changes the outcome; settle routine choices using the project and the kit.\n\nRespect new-project defaults and existing-project constraints. Resolve missing product requirements that materially affect the task; do not infer a database, authentication provider, or example Customer domain from this kit.\n\nUse the [handbook index](java-spring-guidelines.md) to select topic sections. During affected workflow implementation, establish requirements for deletion, caching, external-effect ordering/delivery, and deployment availability controls using the corresponding guide. Reuse explicit answers already supplied for that task or project. Continue independent work while material questions remain pending.\n\nEstablish [reliability goals and alerting](guidelines/operations.md#reliability-goals-and-alerting) per project during discovery, agreeing concrete targets and configuration during the affected operational implementation.\n\n## Scale planning\n\n| Task | Expected collaboration |\n| --- | --- |\n| Small, clear change | Inspect, implement, and verify without a separate planning approval. |\n| Standard feature following established conventions | Outline a short plan and proceed when requirements are clear. |\n| Substantial or uncertain change | Investigate, explain meaningful approaches/trade-offs, and align on the design before implementation. |\n\nA useful plan states intended behavior, scope/non-goals, affected layers/configuration/migrations, acceptance criteria, verification commands, and unresolved decisions. Use a durable plan for longer work. Do not add formal documents or approval gates to every small edit. Once an approach is settled, continue through implementation and verification rather than returning only a plan or repeatedly asking whether to proceed.\n\nGive concise progress updates at meaningful discoveries, decisions, or limitations. Bring the user back in when a material assumption fails or the agreed scope needs to change. Established conventions, including mapping library and DTO shape, are already decisions rather than questions to reopen on every feature.\n\n## Existing projects\n\nRespect documented and enforced requirements. Apply personal defaults where the project leaves room and make relevant, bounded improvements that support the task. Preserve unrelated user work.\n\nFor an existing Gradle project, keep Gradle. For an existing Java/Boot baseline, do not upgrade it during an unrelated change. Preserve enforced formatting and public error/DTO contracts unless migration is requested. A local mapper extraction can support a feature when compatible; converting every service or reorganizing all packages is a broader migration.\n\nWhen an adopted default conflicts with an existing requirement, preserve that requirement and report material deviations. Involve the user when the decision changes architecture, public behavior, or scope; do not ask about every routine difference. Explicit instructions to migrate override the ordinary gradual-adoption default within the requested scope.\n\n## Implement and verify\n\nKeep changes focused on the requested behavior. Add meaningful regression/behavior tests where appropriate. Use the smallest useful check while developing, then complete the project's required checks for the final change. Pure documentation/formatting edits do not need artificial application tests.\n\nUpdate affected documentation with the change, following the [documentation conventions](guidelines/architecture-java-style.md#documentation-and-comments), including the preference to avoid adding Javadoc by default.\n\nUse the actual build/wrapper and supported runtime. Confirm mapping, validation, persistence, authorization, and transaction claims at the layer where the behavior exists. A plain mock-based unit test does not prove a Spring interceptor or database constraint works.\n\nRun the checks before claiming success. Fix failures within scope. Identify pre-existing failures, unavailable dependencies/container runtimes, and skipped checks by name. Do not describe intended tests or an unexecuted CI pipeline as passing evidence. If verification cannot run, explain exactly what was checked and what remains unverified.\n\n## Git delivery\n\nDefault delivery is verified local changes plus a concise handoff. It does not include automatic commits or pushes.\n\n- A request to commit includes the necessary local commit, without implying a push.\n- A request to open a PR includes its branch, commits, push, and PR creation. Complete authorized intermediate steps without repeated questions. Use draft/ready status as requested; when unspecified, prefer a draft and state its status.\n- Merging needs its own instruction.\n\nKeep commits focused and include only the task's changes. Follow existing commit conventions; otherwise use concise imperative messages such as `Handle explicit nulls in customer updates`. PRs explain the problem and resulting behavior, verification evidence, and material migration/configuration changes. Link relevant provided issues and report actual CI state.\n\n## Handoff\n\nLead with the result. Include the changed behavior, relevant files, executed verification and outcomes, and material limitations or project decisions. Keep routine implementation detail brief. A blocked check or pending CI result remains visible; do not conceal it behind a broad “all verified” statement.\n",
+    "7d7e029b6d6f5c951558a2df8544c1a9e29329d037635e79b1b10cbbdffd2fdd": "## Testing\n\n| Surface | Default approach |\n| --- | --- |\n| Business rules | JUnit Jupiter, Mockito, AssertJ; focused unit tests with substituted collaborators. |\n| Controllers | MVC slices with MockMvc and mocked services; verify binding, DTO validation, HTTP status/headers, error shape, and relevant locale behavior. |\n| Mappers | Real configured ModelMapper, including custom conversions and PATCH presence/null cases. |\n| External HTTP clients | Local WireMock servers with the real client/transport; mock provider clients in service unit tests. |\n| AI workflows | Layered application tests and live-model evaluations under the [Spring AI evaluation convention](spring-ai.md#testing-and-evaluations), with versioned workflow datasets and workflow-specific acceptance criteria. |\n| Persistence | Repository tests with Testcontainers using the production database engine and real migrations. |\n| Method security | Actual Spring-managed service proxy with method security enabled; allowed/denied capabilities and resource restrictions. |\n| Complete flow | Selected SpringBootTest scenarios for wiring, transactions, and important cross-layer behavior. |\n\nLoad the intended web security configuration in relevant MVC tests. A mocked service cannot prove its actual authorization annotations work. Test role-to-capability expansion separately from supplying authorities directly with `@WithMockUser`. For a live server, authenticate the HTTP request itself; test-thread security context does not automatically cross to the server thread.\n\nPlain unit tests do not exercise Spring transactions. For transaction-dependent behavior, verify database outcomes and rollback through the real boundary. Account for test-managed rollback masking commit/flush behavior, and flush/reload when testing persistence effects. Container-backed tests need a compatible container runtime. Report unavailable checks rather than treating skipped tests as passing.\n\nPrefer behavioral coverage, boundaries, failures, and regression cases to generated-accessor tests or arbitrary coverage targets. No numeric coverage threshold is prescribed.\n\n### Naming, structure, and fixtures\n\nMirror production packages under `src/test/java`. Use `*Test` for unit/slice tests and `*IT` for integration tests, wiring the actual Maven runners accordingly. Name test methods with `should<Outcome>When<Condition>`, such as `shouldRejectCreationWhenCustomerCodeAlreadyExists`.\n\nStructure tests as Arrange, Act, Assert, separated by blank lines. Add comments when they clarify the scenario. Focus each test on one behavior; multiple related assertions are appropriate. Keep tests independent of execution order and shared mutable state.\n\nKeep setup close to the test. Use `@BeforeEach` for genuinely shared preparation and small fixture builders/factories for repeated domain setup. Group related scenarios with `@Nested` when it improves navigation, and use `@ParameterizedTest` when the same behavior should hold across several inputs.\n\nVerify meaningful outcomes with AssertJ and important collaboration contracts with Mockito. Preserve existing project conventions during gradual adoption.\n\n### Time and asynchronous determinism\n\nInject Java's `Clock` into services whose business behavior needs the current time, such as token expiration, cancellation cutoffs, or temporary access checks. Use `Clock.systemUTC()` in production and a fixed or otherwise controlled clock in tests, applying the agreed business zone where calendar rules require it. Test relevant before/at/after boundaries explicitly.\n\nOrdinary CRUD and comparisons between supplied dates do not require a Clock merely for consistency. Framework-managed audit timestamps may retain their configured auditing mechanism. A fixed business clock does not advance executors, network timeouts, or database clocks; control each relevant time source explicitly when its behavior is under test.\n\nFor asynchronous tests, use bounded futures/latches when completion can be signalled directly, or Awaitility for eventually observable results with an explicit maximum wait and meaningful assertions. Keep polling assertions free of side effects and use completion-based waits rather than arbitrary sleeps for synchronization.\n\nSeparate fast business-rule tests from tests exercising real asynchronous execution. Test retry calculations with controlled delays and randomness where practical, retaining integration tests for actual timing and transport behavior where required.\n\n### External HTTP integration tests\n\nMock provider clients in service unit tests. For client integration tests, use local WireMock servers with the real RestClient and the HTTP transport implementation used in production. Assign ports dynamically, configure the client's test base URL, and reset expectations and recorded requests between tests. WireMock's JUnit Jupiter extension can manage the server lifecycle.\n\nVerify methods, paths, query parameters, headers, JSON payloads, and response handling. Cover successful responses, documented business rejections, malformed responses, timeouts, and relevant retry behavior. Keep routine tests independent of live provider availability.\n\nUse MockRestServiceServer as a focused isolated alternative where appropriate. Its replacement request factory does not exercise real network traffic, so use a local HTTP server for transport-dependent claims.\n\nStubs verify the client against configured examples. Maintain contract examples or use selected sandbox checks when actual provider compatibility needs verification; local stubs alone do not prove that the provider still implements those examples.\n\n### Database test isolation\n\nChoose isolation according to the behavior under test. Reuse containers within a properly managed lifecycle to reduce startup cost while isolating each test's data. Align container lifetime with the Spring contexts that access it.\n\nUse rollback for ordinary repository tests whose changes remain in the test transaction. For tests that commit, use real HTTP requests, or execute background work, provide explicit cleanup/reset or separate databases/schemas as appropriate. A test transaction does not roll back independent server or worker transactions. Finish background work before cleanup so later writes cannot contaminate subsequent tests.\n\nCreate small, scenario-owned fixtures. Read generated IDs from saved entities instead of assuming particular sequence values. Flush and reload where assertions depend on actual database persistence or constraints, and exercise real transaction boundaries when verifying commit/rollback behavior.\n\nStart shared-database integration tests sequentially. Introduce parallel execution only with verified data isolation and supported container lifecycle management, using separate databases/schemas where needed. Keep the selected production database engine and actual Liquibase migrations under the existing persistence testing policy.\n\n",
+    "46d1c53eaaecd33c80324239368f50c9fad2091b2ee37a8bfc3c54bc150c6b5d": "# Spring AI Guidelines\n## Sections\n## Framework preference\n## Dependency and version alignment\n## Component boundaries\n## Provider and model selection\n## Prompt storage and management\n## Response formats and validation\n## API delivery and streaming\n## Workflow and agent orchestration\n## Remote agents and protocol integration\n## Runtime timeouts, retries, and budgets\n## Logging, metrics, and tracing\n## Tool access and execution permissions\n## Untrusted content and permitted data\n## Conversation memory\n## Retrieval and RAG\n## Testing and evaluations\n## Evaluation execution and deployment gates\n## Primary references\n",
+    "bd688efce5a55c806e59bb627e25c55baa5eb02097cce440140a7304d3b6886f": "## Testing and evaluations\n\nUse a layered strategy. Keep ordinary application tests independent of live model calls under the existing [Java testing conventions](testing.md#testing). Verify prompt rendering, DTO validation, authorization, tool execution, and error handling with appropriate substituted collaborators and boundary tests.\n\nMaintain a small, versioned evaluation dataset per AI workflow, including inputs, context, expected outcomes, edge cases, and discovered regressions. Run evaluations against the actual selected model and prompts to assess workflow behavior. Apply the [permitted-data controls](#untrusted-content-and-permitted-data) to evaluation data and grader calls too.\n\nPrefer programmatic checks for measurable outcomes, such as extracted fields, valid references, and correct tool arguments. Use model-based graders for semantic quality where useful, with explicit rubrics calibrated against human-reviewed examples. Define acceptance criteria per workflow, and avoid requiring exact wording for free-form answers.\n\nRecord the model, prompt revision, dataset, generation settings, and grader configuration with results. Spring AI evaluators can support relevance or contextual factual-support checks alongside application-specific checks; a grader result does not establish correctness beyond the criteria and cases actually evaluated.\n\n",
+    "7b24f48a6bde652bae42eda031a8effaaed5da0112a7954981185b74ee612916": "## Evaluation execution and deployment gates\n\nUse tiered execution: run ordinary application tests in regular CI and keep evaluation commands and configuration in the repository so they can also run locally. Model-backed evaluations run locally on demand and in CI only on pushes to `main`. Do not add live-model evaluations to pull-request checks, scheduled runs, or other CI triggers by default.\n\nRequire passing model-backed evaluations before deploying an application revision with AI capabilities. Evaluation failure blocks deployment. Associate the evidence with the exact revision being released and its recorded model, prompt, dataset, and grader configuration; success for an unrelated revision does not satisfy the gate. A failed, skipped, canceled, or unavailable evaluation is not a passing result.\n\nDefine evaluation scope, acceptance criteria, execution budgets, and the concrete job dependencies per project, reusing the settled trigger and deployment-blocking rules. Keep quality failures distinguishable from provider or infrastructure errors in the reported results. Verify the gate in the actual release path, including when evaluation and deployment use separate workflows.\n\n",
+    "dc934935af670fd92e4f9f3f021c1f9f535165ea9ee3ac1261361c0c8ad87b95": "## Prompt storage and management\n\nKeep application-authored prompts in classpath resource files by default, under `src/main/resources/prompts/<workflow>/`, with purpose-specific names such as `system.st` and `user.st`. Avoid inline prompts as much as possible, including short prompts; use them only as a clearly justified exception.\n\nVersion prompt resources with application code through Git and review changes alongside the code that consumes them. Dedicated AI clients load the templates through Spring's Resource abstraction and supply their variables. Keep application instructions separate from user-supplied text and retrieved context.\n\nUse external prompt management as a justified exception when a workflow needs independently managed updates. Establish concrete versioning, availability, and rollout behavior for that mechanism during implementation.\n\n",
+    "079eebbc14d34b694be016ce02d05f487b8f1cfec2cb2bfdb7e4ede94ad9eb75": "## Untrusted content and permitted data\n\nTreat user input, retrieved documents, conversation history, and tool results as untrusted content. Keep them separate from application-owned instructions. Prompt separation and screening support the controls; application code enforces access and execution boundaries.\n\nSend only data needed for the task and permitted for the caller and selected provider. Define sensitive-data handling during workflow implementation, using existing explicit project decisions. Keep credentials and secrets outside prompts.\n\nEnforce authorization and validate proposed actions in application execution code under the [tool-access policy](#tool-access-and-execution-permissions). Validate model output for its downstream destination, such as safe rendering for HTML and parameterized database queries, in addition to the [typed-response validation](#response-formats-and-validation).\n\nUse these application controls by default. Select additional specialized filters or guardrail models per workflow when justified, establishing the permitted data and additional controls during implementation.\n\nTest relevant boundaries with direct and indirect prompt-injection scenarios using harmless fixtures and substitute tools. Evaluate actual authorization, data access, and execution behavior rather than treating prompt wording or screening alone as proof of enforcement.\n\n",
+    "e6efa68f20f7cc2eb1c5a9ede9471e1f86afae4a113abdb06e274d3f520f9907": "# Java and Spring Boot Guidelines\n\nThese are the owner's accepted defaults. In existing projects, apply the [gradual-adoption policy](agent-workflow.md#existing-projects). Explicit project requirements and the current task determine what changes. Examples use `Customer` and `com.example`; these are illustrative names, not mandatory domain or package choices.\n\n## Select guidance by task\n\nThis file is a routing index. Read the applicable project instructions and [working agreement](agent-workflow.md), then select the references below. Read only relevant sections; follow additional links when the behavior crosses a boundary. The references are not a checklist to load in full.\n\n| Task touches | Read |\n| --- | --- |\n| Packages, class responsibilities, service contracts, Java style, collections, decimal values, or opt-in caching | [Architecture and Java style](guidelines/architecture-java-style.md) |\n| Comments, Javadoc, README content, or architectural decision records | [Documentation conventions](guidelines/architecture-java-style.md#documentation-and-comments) |\n| HTTP paths, updates, responses, pagination, binding, versioning, ETags, or OpenAPI | Relevant [REST contract sections](guidelines/rest-api.md#sections) |\n| DTO inheritance, request validation, or structural mapping | [DTO validation and mapping](guidelines/dto-validation-mapping.md); for PATCH, the [worked example](examples/partial-updates.md) |\n| Entities, repositories, transactions, deletion, constraints, or migrations | Relevant [persistence sections](guidelines/entities-persistence.md#sections) |\n| Authentication, CORS/CSRF, capability/resource checks, exceptions, errors, or localization | Applicable [security/error sections](guidelines/security-errors.md#sections) |\n| Provider HTTP calls, commit-dependent effects, scheduling, or asynchronous work | Relevant [integration/background sections](guidelines/integrations-background.md#sections) |\n| AI framework selection | [Spring AI preference](guidelines/spring-ai.md#framework-preference) |\n| AI dependencies, clients, prompts, outputs, agents, memory, or retrieval | Relevant [AI implementation sections](guidelines/spring-ai-implementation.md#sections) |\n| AI execution limits, telemetry, tools, or data trust boundaries | Relevant [AI runtime/security sections](guidelines/spring-ai-runtime.md#sections) |\n| AI workflow tests, model evaluations, or evaluation deployment gates | Relevant [AI evaluation sections](guidelines/spring-ai-evaluations.md#sections) |\n| Tests or verification of changed behavior | [Testing surfaces](guidelines/testing.md#testing), then the applicable subsection |\n| Maven/JDK/Boot setup, dependency updates, security scanning, configuration binding, or logging | Relevant [build/configuration sections](guidelines/build-configuration.md#sections) |\n| Reliability goals, alerts, probes, shutdown, resources, scaling, placement, metrics, or tracing | Relevant [operations sections](guidelines/operations.md#sections) |\n| GKE identities/secrets, image packaging, Helm, environments, or CI/CD | Relevant [delivery sections](guidelines/delivery-gke.md#sections) |\n\n## Scope examples\n\n- A DTO PATCH fix starts with DTO/mapping guidance and its example; add HTTP, persistence, security, and test sections only as affected.\n- A migration starts with persistence/migrations and database testing; consult API contracts only if behavior changes.\n- A Helm-only change starts with [chart organization](guidelines/delivery-gke.md#helm-chart-organization) and [rollout verification](guidelines/delivery-gke.md#deployment-strategy-and-release-verification); add [availability controls](guidelines/operations.md#availability-during-maintenance-and-failures) when budgets or placement change.\n- A minimal bootstrap reads architecture and build/configuration first, adding references for the capabilities actually requested.\n\n## Adoption and primary references\n\nUse the [template index](../templates/README.md) only when adopting or changing configuration recipes. Each topic lists its primary sources. Consult the documentation matching the target project's versions, rather than relying on a newer API from a tutorial.\n",
+    "38a8fc48169d5d28b3a1ce699f90eb746971941fd3a5b854926d4be6066ae27c": "## Testing\n\n| Surface | Default approach |\n| --- | --- |\n| Business rules | JUnit Jupiter, Mockito, AssertJ; focused unit tests with substituted collaborators. |\n| Controllers | MVC slices with MockMvc and mocked services; verify binding, DTO validation, HTTP status/headers, error shape, and relevant locale behavior. |\n| Mappers | Real configured ModelMapper, including custom conversions and PATCH presence/null cases. |\n| External HTTP clients | Local WireMock servers with the real client/transport; mock provider clients in service unit tests. |\n| AI workflows | Layered application tests and live-model evaluations under the [Spring AI evaluation convention](spring-ai-evaluations.md#testing-and-evaluations), with versioned workflow datasets and workflow-specific acceptance criteria. |\n| Persistence | Repository tests with Testcontainers using the production database engine and real migrations. |\n| Method security | Actual Spring-managed service proxy with method security enabled; allowed/denied capabilities and resource restrictions. |\n| Complete flow | Selected SpringBootTest scenarios for wiring, transactions, and important cross-layer behavior. |\n\nLoad the intended web security configuration in relevant MVC tests. A mocked service cannot prove its actual authorization annotations work. Test role-to-capability expansion separately from supplying authorities directly with `@WithMockUser`. For a live server, authenticate the HTTP request itself; test-thread security context does not automatically cross to the server thread.\n\nPlain unit tests do not exercise Spring transactions. For transaction-dependent behavior, verify database outcomes and rollback through the real boundary. Account for test-managed rollback masking commit/flush behavior, and flush/reload when testing persistence effects. Container-backed tests need a compatible container runtime. Report unavailable checks rather than treating skipped tests as passing.\n\nPrefer behavioral coverage, boundaries, failures, and regression cases to generated-accessor tests or arbitrary coverage targets. No numeric coverage threshold is prescribed.\n\n### Naming, structure, and fixtures\n\nMirror production packages under `src/test/java`. Use `*Test` for unit/slice tests and `*IT` for integration tests, wiring the actual Maven runners accordingly. Name test methods with `should<Outcome>When<Condition>`, such as `shouldRejectCreationWhenCustomerCodeAlreadyExists`.\n\nStructure tests as Arrange, Act, Assert, separated by blank lines. Add comments when they clarify the scenario. Focus each test on one behavior; multiple related assertions are appropriate. Keep tests independent of execution order and shared mutable state.\n\nKeep setup close to the test. Use `@BeforeEach` for genuinely shared preparation and small fixture builders/factories for repeated domain setup. Group related scenarios with `@Nested` when it improves navigation, and use `@ParameterizedTest` when the same behavior should hold across several inputs.\n\nVerify meaningful outcomes with AssertJ and important collaboration contracts with Mockito. Preserve existing project conventions during gradual adoption.\n\n### Time and asynchronous determinism\n\nInject Java's `Clock` into services whose business behavior needs the current time, such as token expiration, cancellation cutoffs, or temporary access checks. Use `Clock.systemUTC()` in production and a fixed or otherwise controlled clock in tests, applying the agreed business zone where calendar rules require it. Test relevant before/at/after boundaries explicitly.\n\nOrdinary CRUD and comparisons between supplied dates do not require a Clock merely for consistency. Framework-managed audit timestamps may retain their configured auditing mechanism. A fixed business clock does not advance executors, network timeouts, or database clocks; control each relevant time source explicitly when its behavior is under test.\n\nFor asynchronous tests, use bounded futures/latches when completion can be signalled directly, or Awaitility for eventually observable results with an explicit maximum wait and meaningful assertions. Keep polling assertions free of side effects and use completion-based waits rather than arbitrary sleeps for synchronization.\n\nSeparate fast business-rule tests from tests exercising real asynchronous execution. Test retry calculations with controlled delays and randomness where practical, retaining integration tests for actual timing and transport behavior where required.\n\n### External HTTP integration tests\n\nMock provider clients in service unit tests. For client integration tests, use local WireMock servers with the real RestClient and the HTTP transport implementation used in production. Assign ports dynamically, configure the client's test base URL, and reset expectations and recorded requests between tests. WireMock's JUnit Jupiter extension can manage the server lifecycle.\n\nVerify methods, paths, query parameters, headers, JSON payloads, and response handling. Cover successful responses, documented business rejections, malformed responses, timeouts, and relevant retry behavior. Keep routine tests independent of live provider availability.\n\nUse MockRestServiceServer as a focused isolated alternative where appropriate. Its replacement request factory does not exercise real network traffic, so use a local HTTP server for transport-dependent claims.\n\nStubs verify the client against configured examples. Maintain contract examples or use selected sandbox checks when actual provider compatibility needs verification; local stubs alone do not prove that the provider still implements those examples.\n\n### Database test isolation\n\nChoose isolation according to the behavior under test. Reuse containers within a properly managed lifecycle to reduce startup cost while isolating each test's data. Align container lifetime with the Spring contexts that access it.\n\nUse rollback for ordinary repository tests whose changes remain in the test transaction. For tests that commit, use real HTTP requests, or execute background work, provide explicit cleanup/reset or separate databases/schemas as appropriate. A test transaction does not roll back independent server or worker transactions. Finish background work before cleanup so later writes cannot contaminate subsequent tests.\n\nCreate small, scenario-owned fixtures. Read generated IDs from saved entities instead of assuming particular sequence values. Flush and reload where assertions depend on actual database persistence or constraints, and exercise real transaction boundaries when verifying commit/rollback behavior.\n\nStart shared-database integration tests sequentially. Introduce parallel execution only with verified data isolation and supported container lifecycle management, using separate databases/schemas where needed. Keep the selected production database engine and actual Liquibase migrations under the existing persistence testing policy.\n\n",
+    "a218f2480a384303e9d827c489dd083be223f0e259a140a9ac1cc0e0b99e9209": "# Spring AI Testing and Evaluations\n## Sections\n## Testing and evaluations\n## Evaluation execution and deployment gates\n## Primary references\n",
+    "24d67317e961d74214890b4a7a859284a9094b11643da3cd281c6aa495e779df": "# Spring AI Implementation\n## Sections\n## Dependency and version alignment\n## Component boundaries\n## Provider and model selection\n## Prompt storage and management\n## Response formats and validation\n## API delivery and streaming\n## Workflow and agent orchestration\n## Remote agents and protocol integration\n## Conversation memory\n## Retrieval and RAG\n## Primary references\n",
+    "c0917083fa395cc3e4294230e666ffd1513a5b5dcbcceeff964afe323a9147e8": "## Testing and evaluations\n\nUse a layered strategy. Keep ordinary application tests independent of live model calls under the existing [Java testing conventions](testing.md#testing). Verify prompt rendering, DTO validation, authorization, tool execution, and error handling with appropriate substituted collaborators and boundary tests.\n\nMaintain a small, versioned evaluation dataset per AI workflow, including inputs, context, expected outcomes, edge cases, and discovered regressions. Run evaluations against the actual selected model and prompts to assess workflow behavior. Apply the [permitted-data controls](spring-ai-runtime.md#untrusted-content-and-permitted-data) to evaluation data and grader calls too.\n\nPrefer programmatic checks for measurable outcomes, such as extracted fields, valid references, and correct tool arguments. Use model-based graders for semantic quality where useful, with explicit rubrics calibrated against human-reviewed examples. Define acceptance criteria per workflow, and avoid requiring exact wording for free-form answers.\n\nRecord the model, prompt revision, dataset, generation settings, and grader configuration with results. Spring AI evaluators can support relevance or contextual factual-support checks alongside application-specific checks; a grader result does not establish correctness beyond the criteria and cases actually evaluated.\n\n",
+    "7129c4cff18c6874c6949f07122844075244ddd6cd4e3309a61534bd7e3aba39": "## Untrusted content and permitted data\n\nTreat user input, retrieved documents, conversation history, and tool results as untrusted content. Keep them separate from application-owned instructions. Prompt separation and screening support the controls; application code enforces access and execution boundaries.\n\nSend only data needed for the task and permitted for the caller and selected provider. Define sensitive-data handling during workflow implementation, using existing explicit project decisions. Keep credentials and secrets outside prompts.\n\nEnforce authorization and validate proposed actions in application execution code under the [tool-access policy](#tool-access-and-execution-permissions). Validate model output for its downstream destination, such as safe rendering for HTML and parameterized database queries, in addition to the [typed-response validation](spring-ai-implementation.md#response-formats-and-validation).\n\nUse these application controls by default. Select additional specialized filters or guardrail models per workflow when justified, establishing the permitted data and additional controls during implementation.\n\nTest relevant boundaries with direct and indirect prompt-injection scenarios using harmless fixtures and substitute tools. Evaluate actual authorization, data access, and execution behavior rather than treating prompt wording or screening alone as proof of enforcement.\n\n",
+    "50c95ab0f0ebe7ec8566ede8b80aa73ff964527e6227945ba3d37e7d6c643848": "# Testing Guidelines\n## Sections\n## Testing\n### Naming, structure, and fixtures\n### Time and asynchronous determinism\n### External HTTP integration tests\n### Database test isolation\n## Primary references\n",
+    "f9d3909c4cf4a6b827a32f0b3dcbee730106b1571a6eb10b4722491b6d20cf3b": "# GKE Delivery\n## Sections\n## Delivery infrastructure\n### Application identity and Google Cloud clients\n### Secret storage and delivery\n### Environments and promotion\n### Application packaging\n### Helm chart organization\n### Deployment strategy and release verification\n### GitHub Actions workflows and cloud authentication\n## Primary references\n",
+    "6f575414472917ab77304187dd71ff326de55b311b783b61bdfb28c5e1fb1e09": "### GitHub Actions workflows and cloud authentication\n\nSeparate verification, image publishing, and deployment into focused workflows under `.github/workflows/`:\n\n| Workflow | Responsibility |\n| --- | --- |\n| `ci.yml` | Pull-request Maven verification, OpenAPI validation/compatibility checks, and Helm lint/render checks. |\n| `ai-evals.yml` (AI applications) | Model-backed evaluations on pushes to `main`, with results tied to the evaluated revision and configuration. |\n| `publish.yml` | Verify the selected trusted revision, build and publish its image to Artifact Registry, and record the digest. |\n| `deploy.yml` | Deploy an existing image digest and selected chart version through Helm, then verify rollout and focused smoke checks. |\n\nApply the [portable security-scanning policy](build-configuration.md#portable-security-scanning) at the agreed workflow points. Keep scanner configuration and commands in the repository so the checks can also run locally or on another CI provider; define blocking rules during project implementation.\n\nFor AI applications, enforce the [evaluation deployment gate](spring-ai.md#evaluation-execution-and-deployment-gates): require passing model-backed evaluations for the revision being deployed. Keep live-model evaluations out of PR and scheduled CI runs; their CI trigger is a push to `main`. Ensure separate deployment workflows cannot bypass this gate.\n\nThe current image-publication trigger is a merge into `main`. Verify the resulting main-branch revision before building and publishing, and associate the image tag and digest with that exact revision. Configure event wiring consistently with the project's main-branch policy.\n\nPromote the same image across environments. Choose deployment triggers and environment-promotion rules per project. Give verification jobs only the permissions they need and pin action dependencies to reviewed immutable revisions.\n\nAuthenticate to Google Cloud using GitHub OIDC with Workload Identity Federation and short-lived credentials, with narrowly scoped publishing/deployment permissions and trust restricted to intended repository and release contexts. Reuse the owner's existing GitHub-to-GCP WIF integration where applicable. Establish the target project's provider references, trust conditions, and required identities/permissions rather than recreating federation infrastructure automatically.\n\nSerialize deployments targeting the same Helm release. Cancel superseded verification runs where useful and define deployment cancellation behavior deliberately. Verify workflow checks and the configured authentication and release paths at the appropriate boundaries before claiming they work.\n\n",
+    "2e763403445dc2f3454645b25d8c4e355b10becf4c5df4524d47a012dc86a82e": "### Environments and promotion\n\nThe usual environment setup is development, staging, and production. A POC/MVP may start with a single environment. Decide the actual environment set during development of the target project, adapting it to the project's needs and maturity.\n\nEstablish deployment triggers and promotion rules during that work, including which environments deploy automatically. Publishing an image after a merge to main defines publication timing; environment deployment is a separate decision. Create profiles, Helm overrides, and delivery configuration only for the environments the project actually uses.\n\n",
+    "69fabba2c22d21b14aa321496bc6f07d5fb2b563a8dc53ef61dfbbb6f4d92e84": "### Deployment strategy and release verification\n\nUse rolling updates by default for APIs. Choose Recreate when overlapping versions are incompatible and downtime is acceptable, or canary/blue-green delivery when release risk justifies the additional infrastructure. For availability-sensitive APIs, start with `maxUnavailable: 0` and `maxSurge: 1` when capacity permits overlap, then adjust for application size and requirements.\n\nUse readiness checks to establish when replacements can serve traffic and apply the graceful shutdown policy to terminating instances. Preserve compatibility between overlapping application versions, including the adopted phased schema-evolution policy. Deployment rollout settings control availability during application updates; PodDisruptionBudgets constrain supported voluntary evictions and do not govern a Deployment's rolling updates.\n\nGive deployment verification a bounded timeout and run focused smoke checks against the deployed application. Treat a stalled rollout or failed smoke check as a failed release. Capture diagnostics and follow the project's recovery policy, considering application rollback and database recovery separately. Select concrete rollout settings, checks, timeouts, and recovery behavior for the target project and verify the actual release path before reporting success.\n\n",
+    "6166e3b491cc03a77bf737427574d9269c8d1954ea3569e006e7178157eb39f5": "# Integration Templates\n\nThese are adoption recipes, not a starter application. Read the recipe for the configuration being added or changed; copy only the files it requires. The [handbook index](../docs/java-spring-guidelines.md) routes engineering policies.\n\n| Configuration task | Recipe and artifacts |\n| --- | --- |\n| IntelliJ formatting, imports, Spotless, or Checkstyle | [Maven/quality recipe](maven/README.md), [plugin fragment](maven/quality-plugins.xml), root `.editorconfig`, and `config/checkstyle.xml` |\n| YAML profiles, typed configuration, localization, OSIV, Actuator, or shutdown | Relevant [application configuration recipe](application/README.md) sections and selected YAML fragments in that directory |\n| Liquibase XML master/includes and startup migration adoption | [Liquibase recipe](liquibase/README.md), [master](liquibase/db.changelog-master.xml), and the adapted example change |\n| Image packaging, Helm chart layout, or GitHub Actions | Relevant [delivery recipe](delivery.md) section; concrete charts/workflows are generated for the target project |\n\nPreserve the relative kit layout when copying shared guides and skills. Select actual products, integrations, environments, and resource values during target-project development, using decisions already supplied. Do not adopt unused schema or configuration merely because an example exists.\n",
+    "4c12bc3db262b4a4971d82da541481941dbc9f6cab8b03bdb20af3c4ca606a51": "# Delivery Recipes\n## Container images\n## Helm charts\n## GitHub Actions\n",
+    "5ec3edde7c26282c832d52bf1a092cbaabbf23e7b0bf8ce4b5bd25983232b801": "## GitHub Actions\n\nUse the handbook's [verification/publish/deploy workflow boundaries](../docs/guidelines/delivery-gke.md#github-actions-workflows-and-cloud-authentication). Generate concrete workflows for the target application's Maven, OpenAPI, and Helm checks, Artifact Registry image publication, and Helm deployment by digest.\n\nPublish images after merges into `main`, verifying and recording the exact resulting revision. Use GitHub OIDC with the existing Google Cloud Workload Identity Federation integration where applicable. Configure the actual provider references, repository/release trust conditions, and narrowly scoped identities/permissions for the project. Pin action dependencies to reviewed immutable revisions and serialize deployments to the same Helm release. Choose deployment triggers, promotion rules, and cancellation behavior for the project.\n",
+    "6ec0fdcd2a41a11848cefeeb14b9456e09bb6e55879276535b5fad5a9902c288": "### GitHub Actions workflows and cloud authentication\n\nSeparate verification, image publishing, and deployment into focused workflows under `.github/workflows/`:\n\n| Workflow | Responsibility |\n| --- | --- |\n| `ci.yml` | Pull-request Maven verification, OpenAPI validation/compatibility checks, and Helm lint/render checks. |\n| `ai-evals.yml` (AI applications) | Model-backed evaluations on pushes to `main`, with results tied to the evaluated revision and configuration. |\n| `publish.yml` | Verify the selected trusted revision, build and publish its image to Artifact Registry, and record the digest. |\n| `deploy.yml` | Deploy an existing image digest and selected chart version through Helm, then verify rollout and focused smoke checks. |\n\nApply the [portable security-scanning policy](build-configuration.md#portable-security-scanning) at the agreed workflow points. Keep scanner configuration and commands in the repository so the checks can also run locally or on another CI provider; define blocking rules during project implementation.\n\nFor AI applications, enforce the [evaluation deployment gate](spring-ai-evaluations.md#evaluation-execution-and-deployment-gates): require passing model-backed evaluations for the revision being deployed. Keep live-model evaluations out of PR and scheduled CI runs; their CI trigger is a push to `main`. Ensure separate deployment workflows cannot bypass this gate.\n\nThe current image-publication trigger is a merge into `main`. Verify the resulting main-branch revision before building and publishing, and associate the image tag and digest with that exact revision. Configure event wiring consistently with the project's main-branch policy.\n\nPromote the same image across environments. Choose deployment triggers and environment-promotion rules per project. Give verification jobs only the permissions they need and pin action dependencies to reviewed immutable revisions.\n\nAuthenticate to Google Cloud using GitHub OIDC with Workload Identity Federation and short-lived credentials, with narrowly scoped publishing/deployment permissions and trust restricted to intended repository and release contexts. Reuse the owner's existing GitHub-to-GCP WIF integration where applicable. Establish the target project's provider references, trust conditions, and required identities/permissions rather than recreating federation infrastructure automatically.\n\nSerialize deployments targeting the same Helm release. Cancel superseded verification runs where useful and define deployment cancellation behavior deliberately. Verify workflow checks and the configured authentication and release paths at the appropriate boundaries before claiming they work.\n\n",
+    "461d7cc793c186d70958893a078fbe4c257ea54f60643ecab388c90724f71a2b": "# Architecture and Java Style\n## Sections\n## Project structure\n## Responsibilities\n## Services\n### Controller-facing contracts\n### Service collaboration\n### Caching\n## Java style\n## Collections, mutability, and ordering\n## Money and decimal values\n## Lombok\n## Documentation and comments\n## Primary references\n",
+    "70b92a033fefd86498771740438a887f4956a187db0aa5a62cc6451874632da7": "## Responsibilities\n\n| Component | Owns |\n| --- | --- |\n| Controller | Endpoint definitions, OpenAPI, query/path validation, triggering DTO validation, direct service delegation, and HTTP response construction. |\n| Service | Business logic, contextual validation, orchestration, data preparation, business transformations, and repository interactions. |\n| Client | Provider-focused HTTP communication and provider request/response handling, called by services. |\n| Scheduler | Scheduling triggers and delegation to service-owned business operations. |\n| Mapper | Structural DTO/entity conversion and mapping configuration. |\n| Repository | Database access and query execution. |\n| Entity | Persisted state, mapping metadata, and relationship helpers. |\n| Access policy | Resource-specific authorization checks invoked by services. |\n| Exception handler | HTTP exception translation and unexpected propagated failure logging. |\n\nKeep business logic out of controllers, mappers, and repositories. Services are organized around domain models and may collaborate with other services. Respect existing module boundaries; this kit does not impose an unagreed rule that every service may touch only one repository.\n\nUse concrete `@Service` classes. Add an interface for multiple implementations or a clear abstraction, such as a boundary around an external provider. Do not generate a matching interface/implementation pair for every service.\n\nFor AI capabilities, use the dedicated [AI client boundaries](spring-ai.md#component-boundaries).\n\n",
+    "b8d5f5ffaf1f25f7b7c229e8cc73ec7a41c8415026399e9761df59cddc570411": "## Java style\n\n- Declare explicit local types instead of `var`. Use standard class, method, field, constant, and package naming conventions.\n- Prefer guard clauses and early returns for rejection and no-op cases. Keep `if/else` where both branches represent meaningful alternatives; extract named helpers when nesting obscures the flow.\n- Use streams for straightforward transformations, filtering, grouping, and reductions. Use loops for multi-step work, mutations, complex branching, or recovery. Keep lambdas short, avoid side effects inside `map`/`filter`/`peek`, and use sequential streams by default.\n- Return `Optional<T>` for expected single-result absence, return `T` or throw a meaningful exception for required results, and return empty collections for no matches. An Optional-returning method must never return null. Keep Optional primarily in return contracts, rather than automatically using it for DTO/entity fields.\n- Follow the [exception conventions](security-errors.md#java-exception-conventions): specific unchecked exceptions for failed operations, with explicit result models only when workflow outcomes justify them.\n- Use four spaces, same-line opening braces, braces even for one-statement control blocks, and a 120-column wrapping target. Use UTF-8, LF, final newlines, and no trailing whitespace.\n- Use explicit imports, including in tests. Allow explicit static imports that aid readability. Group JDK imports (`java`/`javax`), Jakarta, third-party, project imports, then static imports; sort within groups.\n\nIntelliJ's built-in formatter reads `.editorconfig`. Spotless performs import/whitespace cleanup; Checkstyle enforces the agreed subset of structural rules. The build deliberately does not install a competing full Java formatter or promise exact IntelliJ wrapping. Update the project import prefix consistently in all quality configurations. A wrapping target is not a blanket ban on an unbreakable URL or string literal.\n\n",
+    "61cb27b2e4b819c15d745d8c04944098c6faf1fdf5cdcd0bd1b5940c21dbae90": "## Responsibilities\n\n| Component | Owns |\n| --- | --- |\n| Controller | Endpoint definitions, OpenAPI, query/path validation, triggering DTO validation, direct service delegation, and HTTP response construction. |\n| Service | Business logic, contextual validation, orchestration, data preparation, business transformations, and repository interactions. |\n| Client | Provider-focused HTTP communication and provider request/response handling, called by services. |\n| Scheduler | Scheduling triggers and delegation to service-owned business operations. |\n| Mapper | Structural DTO/entity conversion and mapping configuration. |\n| Repository | Database access and query execution. |\n| Entity | Persisted state, mapping metadata, and relationship helpers. |\n| Access policy | Resource-specific authorization checks invoked by services. |\n| Exception handler | HTTP exception translation and unexpected propagated failure logging. |\n\nKeep business logic out of controllers, mappers, and repositories. Services are organized around domain models and may collaborate with other services. Respect existing module boundaries; this kit does not impose an unagreed rule that every service may touch only one repository.\n\nUse concrete `@Service` classes. Add an interface for multiple implementations or a clear abstraction, such as a boundary around an external provider. Do not generate a matching interface/implementation pair for every service.\n\nFor AI capabilities, use the dedicated [AI client boundaries](spring-ai-implementation.md#component-boundaries).\n\n"
+  },
+  "answer_transcript": {
+    "path": "2026-11-03-answers.md",
+    "sha256": "75f72de25a53e03c8356451b7d7d69c638af2864eed1b38ba8ed68e540ff0f3e"
+  }
+}

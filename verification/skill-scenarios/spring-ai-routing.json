@@ -1,0 +1,36 @@
+[
+  {
+    "id": "prompt-only-change",
+    "prompt": "This is a read-only planning exercise using this conventions kit; the described application is hypothetical. An existing Spring Boot application summarizes support tickets through a dedicated AI client. Change only its application-authored system prompt so the summary preserves supplied ticket IDs. The prompt already lives at src/main/resources/prompts/ticket-summary/system.st. Keep the existing provider, model, DTO contract, and application architecture. Select the applicable repository skill, locate the guidance needed for this change, and give a short change/verification plan. Do not implement anything.",
+    "criteria": [
+      "Select java-spring-change and read its instructions.",
+      "Read the prompt-storage policy and keep the prompt in its resource file rather than moving it inline.",
+      "Keep the existing provider, model, DTO contract, and dedicated AI-client boundary.",
+      "Plan relevant prompt-rendering/behavior verification; ordinary application checks do not require live model calls. Evaluation guidance may be read for affected verification.",
+      "Avoid unrelated runtime/security, memory, RAG, remote-protocol, and deployment policy bodies; heading/index navigation is allowed."
+    ]
+  },
+  {
+    "id": "evaluation-deployment-gate",
+    "prompt": "This is a read-only planning exercise using this conventions kit; the described application is hypothetical. An existing Java/Spring AI application uses GitHub Actions with separate verification, image publication, and Helm deployment workflows. It already has a repository-owned model-evaluation command and credentials configuration. Plan how to wire that command into CI and the actual deployment path under the owner's conventions. Specify triggers, local use, required evidence, and failure handling. Keep application code, prompts, provider, and model unchanged. Select the applicable repository skill and relevant references; do not implement workflows or call models.",
+    "criteria": [
+      "Select java-spring-change and read its instructions for this application configuration change.",
+      "Read the AI evaluation deployment-gate policy and relevant delivery policy.",
+      "Keep model-backed evaluations locally on demand and in CI only on push to main; do not add PR, schedule, or workflow_dispatch live-evaluation triggers.",
+      "Require passing evidence for the exact deployed revision and recorded model/prompt/dataset/grader configuration, including across separate workflows.",
+      "Treat failed, skipped, canceled, and unavailable evaluations as non-passing and block deployment while distinguishing quality from infrastructure/provider failures.",
+      "Keep ordinary application tests in regular CI and do not expand the task into provider, prompt, memory, RAG, or tool implementation."
+    ]
+  },
+  {
+    "id": "unrelated-java-change",
+    "prompt": "This is a read-only planning exercise using this conventions kit; the described application is hypothetical. An existing Java/Spring Boot application needs a narrow fix to formatInvoiceNumber(long number, int width) in a service: formatting 42 with width 6 must return 000042. Preserve the existing public contract, error behavior, build tool, and framework versions. The change has no AI or external-integration behavior. Select the applicable repository skill, locate relevant guidance, and outline the change and focused tests. Do not implement anything.",
+    "criteria": [
+      "Select java-spring-change and read its instructions.",
+      "Use relevant Java style and unit-testing guidance while preserving existing project conventions and public behavior.",
+      "Plan focused checks for padding and existing boundary/error behavior without assuming database or network dependencies.",
+      "Do not read the Spring AI router or AI policy bodies; encountering its entry in the handbook index is allowed.",
+      "Do not introduce AI dependencies, model calls, or live evaluation requirements."
+    ]
+  }
+]

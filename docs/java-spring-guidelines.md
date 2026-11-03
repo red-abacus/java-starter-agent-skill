@@ -15,6 +15,10 @@ This file is a routing index. Read the applicable project instructions and [work
 | Entities, repositories, transactions, deletion, constraints, or migrations | Relevant [persistence sections](guidelines/entities-persistence.md#sections) |
 | Authentication, CORS/CSRF, capability/resource checks, exceptions, errors, or localization | Applicable [security/error sections](guidelines/security-errors.md#sections) |
 | Provider HTTP calls, commit-dependent effects, scheduling, or asynchronous work | Relevant [integration/background sections](guidelines/integrations-background.md#sections) |
+| AI framework selection | [Spring AI preference](guidelines/spring-ai.md#framework-preference) |
+| AI dependencies, clients, prompts, outputs, agents, memory, or retrieval | Relevant [AI implementation sections](guidelines/spring-ai-implementation.md#sections) |
+| AI execution limits, telemetry, tools, or data trust boundaries | Relevant [AI runtime/security sections](guidelines/spring-ai-runtime.md#sections) |
+| AI workflow tests, model evaluations, or evaluation deployment gates | Relevant [AI evaluation sections](guidelines/spring-ai-evaluations.md#sections) |
 | Tests or verification of changed behavior | [Testing surfaces](guidelines/testing.md#testing), then the applicable subsection |
 | Maven/JDK/Boot setup, dependency updates, security scanning, configuration binding, or logging | Relevant [build/configuration sections](guidelines/build-configuration.md#sections) |
 | Reliability goals, alerts, probes, shutdown, resources, scaling, placement, metrics, or tracing | Relevant [operations sections](guidelines/operations.md#sections) |

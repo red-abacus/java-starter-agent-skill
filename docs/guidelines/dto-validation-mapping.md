@@ -17,6 +17,8 @@ Express as much request-body validation as possible on DTOs. Reject forbidden nu
 
 Services perform checks that need business context or cannot reasonably be represented on DTOs. Validate state that service transformations can invalidate; successful input validation is not proof of valid final state.
 
+For AI-generated DTOs, follow the [AI response validation convention](spring-ai-implementation.md#response-formats-and-validation): validate explicitly at the AI boundary and apply contextual business rules in services.
+
 For monetary and exact decimal fields, align validation with the workflow's agreed [precision, scale, and rounding rules](architecture-java-style.md#money-and-decimal-values) and database columns.
 
 Inherited Bean Validation constraints accumulate. An overridden getter can add a constraint, but cannot remove or relax one from its parent. Put only universally applicable constraints in the base; put creation-only requiredness on the create child's getter. Prefer child-specific rules over operation validation groups. When changing a base constraint, inspect every affected child to preserve its contract.

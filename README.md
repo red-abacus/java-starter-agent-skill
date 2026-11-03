@@ -78,6 +78,8 @@ mvn -f verification/pom.xml verify
 
 The Python command is read-only. It checks kit-owned paths, skill frontmatter, local references and Markdown heading destinations, and XML/YAML syntax. Its tests exercise missing and malformed artifacts, topic references, and relocation. Maven runs real mapping/validation contract probes, Checkstyle, and the cleanup checks. See [verification details](docs/verification.md) for negative checks and unexecuted integration surfaces.
 
+For skill-routing changes, run the separate [read-only agent scenarios](verification/skill-scenarios/README.md). They cover prompt changes, evaluation deployment gates, and unrelated Java work; the Python suite does not execute them.
+
 To validate a relocated copy that includes the optional maintenance files, run:
 
 ```sh

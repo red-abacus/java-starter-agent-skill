@@ -63,6 +63,8 @@ Keep business logic out of controllers, mappers, and repositories. Services are 
 
 Use concrete `@Service` classes. Add an interface for multiple implementations or a clear abstraction, such as a boundary around an external provider. Do not generate a matching interface/implementation pair for every service.
 
+For AI capabilities, use the dedicated [AI client boundaries](spring-ai-implementation.md#component-boundaries).
+
 ## Services
 
 ### Controller-facing contracts
